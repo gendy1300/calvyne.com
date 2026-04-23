@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Calvyne</title>
+  <meta name="description" content="Privacy Policy for Vesara and other Calvyne apps." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green: #1a7a4a;
+      --green-light: #e8f5ee;
+      --green-mid: #2d9e60;
+      --text: #0f1a13;
+      --muted: #5a6b62;
+      --border: #d4e6db;
+      --bg: #f7fbf8;
+      --white: #ffffff;
+      --radius: 14px;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* ── NAV ── */
+    nav {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      height: 64px;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .logo-mark {
+      width: 34px;
+      height: 34px;
+      background: var(--green);
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-mark svg {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: #fff;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .logo-text {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.3px;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, var(--green) 0%, var(--green-mid) 100%);
+      color: #fff;
+      text-align: center;
+      padding: 72px 24px 64px;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(28px, 5vw, 44px);
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-bottom: 14px;
+      line-height: 1.15;
+    }
+
+    .hero p {
+      font-size: 17px;
+      opacity: 0.88;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    /* ── MAIN ── */
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+    }
+
+    /* ── SECTION TITLE ── */
+    .section-title {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--green);
+      margin-bottom: 16px;
+    }
+
+    /* ── POLICY SECTIONS ── */
+    .policy-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 48px;
+    }
+
+    details {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+
+    details[open] { border-color: var(--green); }
+
+    summary {
+      padding: 18px 20px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      user-select: none;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    .summary-arrow {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      stroke: var(--muted);
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: transform 0.2s;
+    }
+
+    details[open] .summary-arrow { transform: rotate(180deg); stroke: var(--green); }
+
+    .policy-answer {
+      padding: 14px 20px 18px;
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.65;
+      border-top: 1px solid var(--border);
+    }
+
+    .policy-answer p { margin-bottom: 8px; }
+    .policy-answer p:last-child { margin-bottom: 0; }
+    .policy-answer ul { padding-left: 18px; margin-bottom: 8px; }
+    .policy-answer li { margin-bottom: 5px; }
+    .policy-answer a { color: var(--green); text-decoration: none; }
+
+    /* ── CONTACT CARD ── */
+    .contact-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 48px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    .contact-icon {
+      width: 52px;
+      height: 52px;
+      background: var(--green-light);
+      border-radius: 12px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact-icon svg {
+      width: 24px;
+      height: 24px;
+      stroke: var(--green);
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .contact-body h3 {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .contact-body p {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--green);
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 9px 18px;
+      border-radius: 8px;
+      transition: background 0.15s;
+    }
+
+    .contact-link:hover { background: #155f3a; }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 28px 24px;
+      font-size: 13px;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+
+    footer a { color: var(--green); text-decoration: none; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 520px) {
+      .contact-card { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="/" class="nav-logo">
+      <div class="logo-mark">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+          <path d="M2 17l10 5 10-5"/>
+          <path d="M2 12l10 5 10-5"/>
+        </svg>
+      </div>
+      <span class="logo-text">Calvyne</span>
+    </a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-badge">Legal</div>
+    <h1>Privacy Policy</h1>
+    <p>How we collect, use, and protect your information.</p>
+  </section>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- UPDATED -->
+    <p class="section-title">Last Updated: April 2026</p>
+
+    <!-- POLICY SECTIONS -->
+    <div class="policy-list">
+
+      <details open>
+        <summary>
+          Overview
+          <svg class="summary-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="policy-answer">
+          <p>Calvyne ("we", "our", "us") built the Vesara app. This policy explains what information we collect when you use Vesara, how we use it, and your rights regarding that information.</p>
+          <p>By using Vesara, you agree to the collection and use of information as described in this policy.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          Information We Collect
+          <svg class="summary-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="policy-answer">
+          <p>We collect the following information to provide and improve our service:</p>
+          <ul>
+            <li><strong>Account information:</strong> email address and password when you create an account.</li>
+            <li><strong>Profile information:</strong> your goals, challenges, and preferences that you provide to personalise your experience.</li>
+            <li><strong>Usage data:</strong> plans you generate, tasks you create, and interactions with the AI coach.</li>
+            <li><strong>Device information:</strong> device type, OS version, and app version for debugging purposes.</li>
+            <li><strong>Purchase information:</strong> subscription status verified through Apple. We do not store your payment details.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          How We Use Your Information
+          <svg class="summary-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="policy-answer">
+          <ul>
+            <li>To generate personalised AI plans and coaching responses.</li>
+            <li>To sync your data across your devices.</li>
+            <li>To send push notifications for your scheduled plan steps (only if you allow notifications).</li>
+            <li>To verify your subscription and unlock premium features.</li>
+            <li>To improve the app and fix issues.</li>
+          </ul>
+          <p>We do not sell your personal information to third parties.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          AI Processing
+          <svg class="summary-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="policy-answer">
+          <p>Vesara uses AI to generate plans and coaching replies. Your profile information and inputs are sent to our backend server to produce these responses. We use Google Gemini as our AI provider. Your data is processed in accordance with Google's data processing terms.</p>
+          <p>We do not use your personal data to train AI models.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          Data Security
+          <svg class="summary-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="policy-answer">
+          <p>We take reasonable measures to protect your information, including encrypted data transmission (HTTPS) and secure password storage. However, no method of transmission over the internet is 100% secure.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          Third-Party Services
+          <svg class="summary-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="policy-answer">
+          <p>We use the following third-party services:</p>
+          <ul>
+            <li><strong>Supabase</strong> — database and authentication.</li>
+            <li><strong>Google Gemini</strong> — AI plan and coaching generation.</li>
+            <li><strong>Apple App Store</strong> — subscription and payment processing.</li>
+          </ul>
+          <p>Each service has its own privacy policy governing how they handle data.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          Children's Privacy
+          <svg class="summary-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="policy-answer">
+          <p>Vesara is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us and we will delete it promptly.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          Data Retention
+          <svg class="summary-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="policy-answer">
+          <p>We retain your data for as long as your account is active. If you delete your account, we will delete your personal data within 30 days, except where required by law.</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- CONTACT -->
+    <p class="section-title">Questions or Data Requests</p>
+    <div class="contact-card">
+      <div class="contact-icon">
+        <svg viewBox="0 0 24 24">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+      </div>
+      <div class="contact-body">
+        <h3>Contact Us</h3>
+        <p>For privacy questions or to request deletion of your data, email us.</p>
+        <a href="mailto:support@calvyne.com" class="contact-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+          </svg>
+          support@calvyne.com
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Calvyne. All rights reserved. &nbsp;·&nbsp; <a href="/support">Support</a> &nbsp;·&nbsp; <a href="mailto:support@calvyne.com">support@calvyne.com</a></p>
+  </footer>
+
+</body>
+</html>
