@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy — Calvyne</title>
-  <meta name="description" content="Privacy Policy for Vesara and other Calvyne apps." />
+  <meta name="description" content="Privacy Policy for Vesara, SnapSplit and other Calvyne apps." />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -292,7 +292,7 @@
   <main>
 
     <!-- UPDATED -->
-    <p class="section-title">Last Updated: April 2026</p>
+    <p class="section-title">Last Updated: September 2026</p>
 
     <!-- POLICY SECTIONS -->
     <div class="policy-list">
@@ -303,8 +303,41 @@
           <svg class="summary-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
         <div class="policy-answer">
-          <p>Calvyne ("we", "our", "us") built the Vesara app. This policy explains what information we collect when you use Vesara, how we use it, and your rights regarding that information.</p>
-          <p>By using Vesara, you agree to the collection and use of information as described in this policy.</p>
+          <p>Calvyne ("we", "our", "us") built the Vesara and SnapSplit apps. This policy explains what information we collect when you use them, how we use it, and your rights regarding that information.</p>
+          <p>The SnapSplit section below covers SnapSplit. All other sections describe Vesara.</p>
+          <p>By using our apps, you agree to the collection and use of information as described in this policy.</p>
+        </div>
+      </details>
+
+      <details id="snapsplit" open>
+        <summary>
+          SnapSplit
+          <svg class="summary-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="policy-answer">
+          <p>SnapSplit reads a photo of a restaurant receipt and splits the bill between the people at the table. It has no accounts, sign-in or passwords.</p>
+          <p><strong>What we collect</strong></p>
+          <ul>
+            <li><strong>Receipt photos:</strong> the photo you scan or pick is sent to our server and on to Google Gemini to read the items and prices. We do not store the photo; once the items are returned to your device it is discarded on our side. Google processes it under its Gemini API terms.</li>
+            <li><strong>Anonymous app ID:</strong> SnapSplit signs in anonymously with Firebase so we can count your free scans. This ID is random and is not tied to your name, email or phone number.</li>
+            <li><strong>Usage counters:</strong> how many scans you have used this month and today, and any scans unlocked by watching an ad.</li>
+            <li><strong>Subscription status:</strong> if you subscribe to SnapSplit Pro, we store the subscription's expiry date and the transaction details Apple or Google give us to confirm it. We never see or store your payment details.</li>
+            <li><strong>Network address:</strong> a one-way hash of your IP address, used only to limit abuse (a daily cap on scans per network).</li>
+            <li><strong>Diagnostics and usage data:</strong> crash reports and in-app events (for example "scan completed") through Firebase Crashlytics and Google Analytics for Firebase. These are not linked to your anonymous app ID.</li>
+          </ul>
+          <p>The names you type for the people splitting the bill, and the split itself, stay on your device.</p>
+          <p><strong>Advertising</strong></p>
+          <p>Free users see ads from Google AdMob. SnapSplit does not ask for permission to track you across apps, so AdMob does not receive your device's advertising identifier. It may still use your approximate location (from your IP address) and device information to serve and measure ads. SnapSplit Pro removes all ads.</p>
+          <p><strong>Third-party services</strong></p>
+          <ul>
+            <li><strong>Google Firebase</strong> (Authentication, Cloud Functions, Firestore, App Check, Crashlytics, Analytics): hosting, anonymous sign-in, usage counters and diagnostics.</li>
+            <li><strong>Google Gemini</strong>: reading receipt photos. We do not use your photos to train AI models.</li>
+            <li><strong>Google AdMob</strong>: ads for free users.</li>
+            <li><strong>Apple App Store / Google Play</strong>: subscription purchases and verification.</li>
+          </ul>
+          <p><strong>Retention and deletion</strong></p>
+          <p>Usage counters and subscription status are kept while you use the app. Deleting SnapSplit removes everything stored on your device. To have your server-side data deleted, email us and we will remove it within 30 days. Your subscription itself is managed and cancelled in your Apple or Google account settings.</p>
+          <p>SnapSplit is not directed at children under 13.</p>
         </div>
       </details>
 
